@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2FB8BA032417940C004E41AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8BA022417940C004E41AB /* main.swift */; };
+		2FB8BA0B24179492004E41AB /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8BA0A24179492004E41AB /* ArgumentParser */; };
+		2FB8BA0E241799EE004E41AB /* Files in Frameworks */ = {isa = PBXBuildFile; productRef = 2FB8BA0D241799EE004E41AB /* Files */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB8BA0E241799EE004E41AB /* Files in Frameworks */,
+				2FB8BA0B24179492004E41AB /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,10 @@
 			dependencies = (
 			);
 			name = AssetMaker;
+			packageProductDependencies = (
+				2FB8BA0A24179492004E41AB /* ArgumentParser */,
+				2FB8BA0D241799EE004E41AB /* Files */,
+			);
 			productName = AssetMaker;
 			productReference = 2FB8B9FF2417940C004E41AB /* AssetMaker */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +114,10 @@
 				Base,
 			);
 			mainGroup = 2FB8B9F62417940C004E41AB;
+			packageReferences = (
+				2FB8BA0924179492004E41AB /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				2FB8BA0C241799EE004E41AB /* XCRemoteSwiftPackageReference "files" */,
+			);
 			productRefGroup = 2FB8BA002417940C004E41AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,6 +296,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FB8BA0924179492004E41AB /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+		2FB8BA0C241799EE004E41AB /* XCRemoteSwiftPackageReference "files" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnsundell/files.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FB8BA0A24179492004E41AB /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB8BA0924179492004E41AB /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+		2FB8BA0D241799EE004E41AB /* Files */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FB8BA0C241799EE004E41AB /* XCRemoteSwiftPackageReference "files" */;
+			productName = Files;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FB8B9F72417940C004E41AB /* Project object */;
 }
